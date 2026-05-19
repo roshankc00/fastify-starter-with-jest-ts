@@ -1,0 +1,13 @@
+pnpm test ||
+(
+        echo '❌ Tests Failed. Make the required changes listed above, add changes and try to commit again.'
+        false;
+)
+
+pnpm build ||
+(
+        echo '❌ Build Failed. Make the required changes listed above, add changes and try to commit again.'
+        false;
+)
+# If everything passes... Now we can commit
+echo '✅ Build Passed. Committing this now...'
