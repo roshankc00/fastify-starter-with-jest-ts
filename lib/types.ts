@@ -1,5 +1,3 @@
-;
-
 export type FastifyDone = (error?: Error) => void;
 
 export type ClerkPublicMetadata = {
