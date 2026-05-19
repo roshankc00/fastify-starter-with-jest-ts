@@ -14,14 +14,6 @@ async function healthRoutes(fastify: FastifyInstance) {
       },
     },
   });
-
-  // For ClickFunnels webhook to work properly
-  fastify.route({
-    method: "POST",
-    url: "/funnel_webhooks/test",
-    handler: (_, res) => res.status(200).send("ok"),
-    schema: {},
-  });
 }
 
 export default healthRoutes;
